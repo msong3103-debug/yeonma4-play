@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#140e1c">
+  <title>연마의 길</title>
+  <!-- 설치(PWA, 10-18): 크롬 "앱 설치" · 홈 화면에 추가 -->
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" type="image/png" href="./icons/favicon-32.png">
+  <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="연마의 길">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <script type="module" crossorigin src="./assets/index-Blk8JiRr.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-BzwSffbd.css">
+</head>
+<body>
+  <!-- 세로 틀: 위쪽 약 40% = 횡스크롤 무대(캔버스), 아래 = 탭 화면 -->
+  <div id="app">
+    <section id="stage">
+      <canvas id="stageCanvas"></canvas>
+    </section>
+    <section id="panel">
+      <div id="tabBody"></div>
+    </section>
+    <nav id="tabs"></nav>
+    <!-- 로딩 화면(10-18): 게임 코드가 오기 전부터 보임 → src/ui/boot.js가 채우고 끝나면 걷음 -->
+    <div id="boot" role="status" aria-live="polite">
+      <div class="bt-sparks" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <div class="bt-mid">
+        <div class="bt-logo"><img src="./img/ui/emblem.png" alt="" onerror="this.remove()"></div>
+        <h1 class="bt-title">연마의 길</h1>
+        <p class="bt-sub">두드리고, 버티고, 빛나게</p>
+      </div>
+      <div class="bt-low">
+        <div class="bt-bar"><i id="bootFill"></i></div>
+        <p class="bt-msg" id="bootMsg">불러오는 중…</p>
+        <p class="bt-tip" id="bootTip"></p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
